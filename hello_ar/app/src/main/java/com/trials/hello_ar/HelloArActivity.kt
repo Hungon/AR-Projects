@@ -103,7 +103,7 @@ class HelloArActivity : AppCompatActivity(), GLSurfaceView.Renderer {
             var exception: Exception? = null
             var message: String? = null
             try {
-                when (ArCoreApk.getInstance().requestInstall(this, !installRequested)) {
+                when (ArCoreApk.getInstance().requestInstall(this, !installRequested)!!) {
                     INSTALL_REQUESTED -> {
                         installRequested = true
                         return
@@ -365,7 +365,7 @@ class HelloArActivity : AppCompatActivity(), GLSurfaceView.Renderer {
     }
 
     companion object {
-        private val TAG = HelloArActivity::class.java!!.getSimpleName()
+        private val TAG = HelloArActivity::class.java.simpleName
         private val DEFAULT_COLOR = floatArrayOf(0f, 0f, 0f, 0f)
     }
 }

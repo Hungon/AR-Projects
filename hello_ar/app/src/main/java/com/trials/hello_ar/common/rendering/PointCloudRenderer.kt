@@ -138,15 +138,15 @@ class PointCloudRenderer {
     }
 
     companion object {
-        private val TAG = PointCloud::class.java!!.getSimpleName()
+        private val TAG = PointCloud::class.java.simpleName
 
         // Shader names.
-        private val VERTEX_SHADER_NAME = "shaders/point_cloud.vert"
-        private val FRAGMENT_SHADER_NAME = "shaders/point_cloud.frag"
+        private const val VERTEX_SHADER_NAME = "shaders/point_cloud.vert"
+        private const val FRAGMENT_SHADER_NAME = "shaders/point_cloud.frag"
 
-        private val BYTES_PER_FLOAT = java.lang.Float.SIZE / 8
-        private val FLOATS_PER_POINT = 4 // X,Y,Z,confidence.
-        private val BYTES_PER_POINT = BYTES_PER_FLOAT * FLOATS_PER_POINT
-        private val INITIAL_BUFFER_POINTS = 1000
+        private const val BYTES_PER_FLOAT = java.lang.Float.SIZE / 8
+        private const val FLOATS_PER_POINT = 4 // X,Y,Z,confidence.
+        private const val BYTES_PER_POINT = BYTES_PER_FLOAT * FLOATS_PER_POINT
+        private const val INITIAL_BUFFER_POINTS = 1000
     }
 }

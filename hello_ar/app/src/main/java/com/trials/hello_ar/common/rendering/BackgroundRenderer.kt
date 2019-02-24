@@ -166,7 +166,7 @@ class BackgroundRenderer {
     }
 
     companion object {
-        private val TAG = BackgroundRenderer::class.java!!.getSimpleName()
+        private val TAG = BackgroundRenderer::class.java.getSimpleName()
 
         // Shader names.
         private val VERTEX_SHADER_NAME = "shaders/screenquad.vert"

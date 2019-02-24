@@ -352,7 +352,7 @@ class PlaneRenderer {
     }
 
     companion object {
-        private val TAG = PlaneRenderer::class.java!!.getSimpleName()
+        private val TAG = PlaneRenderer::class.java.getSimpleName()
 
         // Shader names.
         private val VERTEX_SHADER_NAME = "shaders/plane.vert"

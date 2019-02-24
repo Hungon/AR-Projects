@@ -356,7 +356,7 @@ class ObjectRenderer {
     }
 
     companion object {
-        private val TAG = ObjectRenderer::class.java!!.getSimpleName()
+        private val TAG = ObjectRenderer::class.java.getSimpleName()
 
         // Shader names.
         private val VERTEX_SHADER_NAME = "shaders/object.vert"

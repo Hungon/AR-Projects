@@ -46,17 +46,17 @@ class DisplayRotationHelper
         get() = display.rotation
 
     init {
-        display = context.getSystemService<WindowManager>(WindowManager::class.java!!)!!.defaultDisplay
+        display = context.getSystemService<WindowManager>(WindowManager::class.java)!!.defaultDisplay
     }
 
     /** Registers the display listener. Should be called from [Activity.onResume].  */
     fun onResume() {
-        context.getSystemService<DisplayManager>(DisplayManager::class.java!!)!!.registerDisplayListener(this, null)
+        context.getSystemService<DisplayManager>(DisplayManager::class.java)!!.registerDisplayListener(this, null)
     }
 
     /** Unregisters the display listener. Should be called from [Activity.onPause].  */
     fun onPause() {
-        context.getSystemService<DisplayManager>(DisplayManager::class.java!!)!!.unregisterDisplayListener(this)
+        context.getSystemService<DisplayManager>(DisplayManager::class.java)!!.unregisterDisplayListener(this)
     }
 
     /**
